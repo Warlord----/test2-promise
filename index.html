@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="test2">
+<head lang="en">
+  <meta charset="UTF-8">
+  <title></title>
+</head>
+<body>
+<div class="container" ng-controller="test2Controller" ng-cloak>
+  <ul ng-repeat="item in items | limitTo: 20">
+    <li>{{item.lector}}</li>
+  </ul>
+</div>
+<script type="text/javascript"
+        src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.0/angular.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+</body>
+</html>
