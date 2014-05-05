@@ -61,9 +61,10 @@ test2.controller('test2Controller', function($scope, $http, $q, $filter) {
 
     console.log('About to update record');
 
-    var change = {'tags': ['aa', 'bb']};
+    obj.tags = ['aa', 'bb'];
     var id = obj._id;
-    $http.put('//54.72.3.96:3000/techtalks/' + id, angular.toJson(change),
+    delete obj._id;
+    $http.put('//54.72.3.96:3000/techtalks/' + id, angular.toJson(obj),
       {'Content-Type': 'application/json'})
       .success(function(item) {
         deferred.resolve(id);
